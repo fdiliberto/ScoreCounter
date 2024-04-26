@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="scoreboard-container">
+      <div id="timer">
+        <p id="time">
+          <span id="hours">00</span>:<span id="minutes">00</span>:<span
+            id="seconds"
+            >00</span
+          >
+        </p>
+        <div id="timer-settings">
+          <button type="button" id="startTimer" onclick="startTimer()">
+            ▶️
+          </button>
+          <button type="button" id="pauseTimer" onclick="pauseTimer()">
+            ⏸
+          </button>
+          <button type="button" id="stopTimer" onclick="stopTimer()">⏹</button>
+        </div>
+      </div>
+      <div id="pointers">
+        <div class="box-pointer" id="home">
+          <h2 class="text-italic">Nome squadra</h2>
+          <img src="https://placehold.co/100" />
+          <h3 class="point-label">Punti:</h3>
+          <p class="point">45</p>
+        </div>
+        <div class="box-pointer" id="guests">
+          <h2 class="text-italic">Nome squadra</h2>
+          <img src="https://placehold.co/100" />
+          <h3 class="point-label">Punti:</h3>
+          <p class="point">45</p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
