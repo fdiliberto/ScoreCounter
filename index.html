@@ -33,16 +33,39 @@
       </div>
       <div id="pointers">
         <div class="box-pointer" id="home">
-          <h2 class="text-italic">Nome squadra</h2>
+          <h2 class="team text-italic">Nome squadra</h2>
           <img src="https://placehold.co/100" />
           <h3 class="point-label">Punti:</h3>
-          <p class="point">45</p>
+          <p id="home-point" class="point">0</p>
+          <div class="add-pointers-container">
+            <button class="add-pointers-btn" onclick="addPoints('home', 1)">
+              +1
+            </button>
+            <button class="add-pointers-btn" onclick="addPoints('home', 3)">
+              +3
+            </button>
+            <button class="add-pointers-btn" onclick="addPoints('home', 5)">
+              +5
+            </button>
+          </div>
         </div>
+        <div id="versus"><span>VS</span></div>
         <div class="box-pointer" id="guests">
-          <h2 class="text-italic">Nome squadra</h2>
+          <h2 class="team text-italic">Nome squadra</h2>
           <img src="https://placehold.co/100" />
           <h3 class="point-label">Punti:</h3>
-          <p class="point">45</p>
+          <p id="guests-point" class="point">0</p>
+          <div class="add-pointers-container">
+            <button class="add-pointers-btn" onclick="addPoints('guests', 1)">
+              +1
+            </button>
+            <button class="add-pointers-btn" onclick="addPoints('guests', 3)">
+              +3
+            </button>
+            <button class="add-pointers-btn" onclick="addPoints('guests', 5)">
+              +5
+            </button>
+          </div>
         </div>
       </div>
     </div>

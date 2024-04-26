@@ -64,15 +64,31 @@ body {
   justify-content: center;
 }
 
+#versus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#versus span {
+  font-size: 40px;
+  color: blue;
+  font-weight: bold;
+}
+
 .box-pointer {
   margin: 40px 30px;
   width: 300px;
   border: 1px solid lightgray;
-  height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 20px;
+}
+
+.team {
+  margin-top: 0;
 }
 
 .point-label {
@@ -85,4 +101,13 @@ body {
   font-size: 75px;
   font-weight: bold;
   margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.add-pointers-btn {
+  width: 50px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
 }

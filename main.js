@@ -73,3 +73,9 @@ function adaptContent(element, result) {
     element.textContent = result;
   }
 }
+
+function addPoints(team, total) {
+  const selector = team + "-point";
+  let current = document.getElementById(selector).textContent;
+  document.getElementById(selector).textContent = parseInt(current) + total;
+}
