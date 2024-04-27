@@ -17,9 +17,9 @@ function pauseTimer() {
   }
 }
 
-function stopTimer() {
+function stopTimer(resetPoints) {
   pauseTimer();
-  initialValues();
+  initialValues(resetPoints);
 }
 
 function increment() {
@@ -48,12 +48,6 @@ function increment() {
   }
 }
 
-function initialValues() {
-  getHoursElement().textContent = "00";
-  getMinutesElement().textContent = "00";
-  getSecondsElement().textContent = "00";
-}
-
 function getHoursElement() {
   return document.getElementById("hours");
 }
@@ -78,4 +72,35 @@ function addPoints(team, total) {
   const selector = team + "-point";
   let current = document.getElementById(selector).textContent;
   document.getElementById(selector).textContent = parseInt(current) + total;
+  checkPoints();
+}
+
+function checkPoints() {
+  const guestPointsElement = document.getElementById("guests-point");
+  const homePointsElement = document.getElementById("home-point");
+
+  const guestPoints = parseInt(guestPointsElement.textContent);
+  const homePoints = parseInt(homePointsElement.textContent);
+
+  if (homePoints > guestPoints) {
+    guestPointsElement.style.color = "red";
+    homePointsElement.style.color = "green";
+  } else if (guestPoints > homePoints) {
+    guestPointsElement.style.color = "green";
+    homePointsElement.style.color = "red";
+  } else {
+    guestPointsElement.style.color = "black";
+    homePointsElement.style.color = "black";
+  }
+}
+
+function initialValues(resetPoints) {
+  getHoursElement().textContent = "00";
+  getMinutesElement().textContent = "00";
+  getSecondsElement().textContent = "00";
+
+  if (resetPoints) {
+    document.getElementById("guests-point").textContent = "0";
+    document.getElementById("home-point").textContent = "0";
+  }
 }

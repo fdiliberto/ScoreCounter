@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -29,12 +33,13 @@
             ⏸
           </button>
           <button type="button" id="stopTimer" onclick="stopTimer()">⏹</button>
+          <button type="button" id="reset" onclick="stopTimer(true)">🔄</button>
         </div>
       </div>
       <div id="pointers">
         <div class="box-pointer" id="home">
-          <h2 class="team text-italic">Nome squadra</h2>
-          <img src="https://placehold.co/100" />
+          <h2 class="team text-italic">Zannella Basket Cefalù</h2>
+          <img src="images/zannella_basket.png" />
           <h3 class="point-label">Punti:</h3>
           <p id="home-point" class="point">0</p>
           <div class="add-pointers-container">
@@ -51,8 +56,8 @@
         </div>
         <div id="versus"><span>VS</span></div>
         <div class="box-pointer" id="guests">
-          <h2 class="team text-italic">Nome squadra</h2>
-          <img src="https://placehold.co/100" />
+          <h2 class="team text-italic">Orlandina Basket</h2>
+          <img src="images/orlandina_basket.png" />
           <h3 class="point-label">Punti:</h3>
           <p id="guests-point" class="point">0</p>
           <div class="add-pointers-container">

@@ -21,8 +21,9 @@ body {
   margin: 0 auto;
   border: 2px solid lightblue;
   margin-top: 30px;
-  height: 600px;
+  height: 650px;
   padding: 15px 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #timer {
@@ -72,7 +73,7 @@ body {
 
 #versus span {
   font-size: 40px;
-  color: blue;
+  color: grey;
   font-weight: bold;
 }
 
@@ -87,8 +88,15 @@ body {
   padding: 20px;
 }
 
+.box-pointer img {
+  width: 150px;
+  border: 3px solid lightblue;
+  border-radius: 50%;
+}
+
 .team {
   margin-top: 0;
+  font-size: 20px;
 }
 
 .point-label {
@@ -110,4 +118,5 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
